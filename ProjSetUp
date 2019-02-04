@@ -1,7 +1,0 @@
--#!/bin/sh      
- <<EOF        
-   
- npm install
- node RunTests_Rep_xUnit --tagNames bing_search --browser firefox
- exit       
-EOF
