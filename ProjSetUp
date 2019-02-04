@@ -1,6 +1,6 @@
 -#!/bin/sh      
  <<EOF        
- cd /your-project-path  
+   
  npm install
  node RunTests_Rep_xUnit --tagNames bing_search --browser firefox
  exit       
