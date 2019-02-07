@@ -67,7 +67,7 @@ createTestCafe('localhost', 1337, 1338)
 			.tags(options.get('tagNames'))
 			.reporter('xunit', reportStr)
 			.concurrency(options.get('paralelExec'))
-			.screenshots(`${__dirname}/Screenshots/',false,'${DATE}_${TIME}_${BROWSER}.png`)		
+			.screenshots(`${__dirname}`+'/Screenshots/',false,'${DATE}_${TIME}_${BROWSER}.png')		
             .run();
     })
     .then(failedCount => {
