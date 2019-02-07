@@ -10,19 +10,19 @@ Given(/^browse to web site "([^"]*)"$/, async function(tc,url) {
 	});
 
 When(/^input keyword "([^"]*)"$/, async function (tc,keyword) {
-	let searchField=Selector('#sb_form_q');
+	let searchField= Selector('#sb_form_q');
 	await tc.typeText(searchField, keyword);
 	});
 Then(/^click bing Search button$/, async function (tc) {
 		//#sb_form_go
-		let searchBtn=Selector('#sb_form_q');
+		let searchBtn= Selector('#sb_form_q');
 		//await tc.click(searchBtn);
 		await tc.pressKey('enter');		
 	});
 
 Then(/^first search result should contain text "([^"]*)"$/, async function (tc, keyword) {
 	/* #b_results > li:nth-child(1) > h2 > a*/
-	let Res=Selector('#b_results').find('a');  //check if specified elem exists
+	let Res= Selector('#b_results').find('a');  //check if specified elem exists
 	await tc.expect(Res.innerText).contains(keyword,{ timeout: 500 }); 
 	await tc.takeScreenshot();
 });
